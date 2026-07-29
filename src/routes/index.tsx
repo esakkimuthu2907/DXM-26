@@ -15,7 +15,6 @@ import sympoLogo from "@/assets/dxm-logo-original.png";
 import gears from "@/assets/bg-gears.jpg";
 import gearChrome from "@/assets/gear-chrome.png";
 import gearDark from "@/assets/gear-dark.png";
-import spiderHeroBg from "@/assets/spider-hero-bg.jpg";
 import { getSettings, listItems } from "@/lib/localdb";
 
 export const Route = createFileRoute("/")(({
@@ -58,8 +57,10 @@ type EventRow = {
 function HeroBackground() {
   return (
     <div className="absolute inset-0 z-0 overflow-hidden bg-black">
-      {/* Spider-Man Image base */}
-      <img src={spiderHeroBg} alt="Spider-Man Background" className="absolute inset-0 w-full h-full object-cover" />
+      {/* Dark gradient base */}
+      <div className="absolute inset-0" style={{
+        background: "linear-gradient(135deg, #0a0a0f 0%, #0d0f1a 40%, #080c14 100%)"
+      }} />
 
       {/* Moving light streaks - simulate car speed lines */}
       {[...Array(18)].map((_, i) => (
@@ -147,12 +148,12 @@ function HeroBackground() {
 
       {/* Overlay gradient for readability */}
       <div className="absolute inset-0" style={{
-        background: "linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%)"
+        background: "linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%)"
       }} />
 
       {/* Cinematic vignette */}
       <div className="absolute inset-0 z-0 pointer-events-none" style={{
-        background: "radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.4) 80%, rgba(0,0,0,0.8) 100%)",
+        background: "radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.75) 80%, rgba(0,0,0,0.98) 100%)",
       }} />
 
       {/* Cinematic Lightning Flashes */}
