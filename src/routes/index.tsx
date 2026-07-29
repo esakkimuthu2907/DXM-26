@@ -59,7 +59,7 @@ function HeroBackground() {
   return (
     <div className="absolute inset-0 z-0 overflow-hidden bg-black">
       {/* Spider-Man Image base */}
-      <img src={spiderHeroBg} alt="Spider-Man Background" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+      <img src={spiderHeroBg} alt="Spider-Man Background" className="absolute inset-0 w-full h-full object-cover" />
 
       {/* Moving light streaks - simulate car speed lines */}
       {[...Array(18)].map((_, i) => (
@@ -147,12 +147,12 @@ function HeroBackground() {
 
       {/* Overlay gradient for readability */}
       <div className="absolute inset-0" style={{
-        background: "linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%)"
+        background: "linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%)"
       }} />
 
       {/* Cinematic vignette */}
       <div className="absolute inset-0 z-0 pointer-events-none" style={{
-        background: "radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.75) 80%, rgba(0,0,0,0.98) 100%)",
+        background: "radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.4) 80%, rgba(0,0,0,0.8) 100%)",
       }} />
 
       {/* Cinematic Lightning Flashes */}
