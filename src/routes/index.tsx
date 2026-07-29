@@ -15,6 +15,7 @@ import sympoLogo from "@/assets/dxm-logo-original.png";
 import gears from "@/assets/bg-gears.jpg";
 import gearChrome from "@/assets/gear-chrome.png";
 import gearDark from "@/assets/gear-dark.png";
+import spiderHeroBg from "@/assets/spider-hero-bg.jpg";
 import { getSettings, listItems } from "@/lib/localdb";
 
 export const Route = createFileRoute("/")(({
@@ -57,10 +58,8 @@ type EventRow = {
 function HeroBackground() {
   return (
     <div className="absolute inset-0 z-0 overflow-hidden bg-black">
-      {/* Dark gradient base */}
-      <div className="absolute inset-0" style={{
-        background: "linear-gradient(135deg, #0a0a0f 0%, #0d0f1a 40%, #080c14 100%)"
-      }} />
+      {/* Spider-Man Image base */}
+      <img src={spiderHeroBg} alt="Spider-Man Background" className="absolute inset-0 w-full h-full object-cover opacity-80" />
 
       {/* Moving light streaks - simulate car speed lines */}
       {[...Array(18)].map((_, i) => (
